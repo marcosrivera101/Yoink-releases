@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yoink! for Android</title>
+<meta name="description" content="Download videos and music, a built-in browser with ad blocker, Live TV and more. Free for Android.">
+<meta property="og:title" content="Yoink! for Android">
+<meta property="og:description" content="Download videos and music, a browser with ad blocker, Live TV and more.">
+<meta name="theme-color" content="#070b16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--acc:#4BE3B0;--red:#E53935;--bg:#070b16;--card:#ffffff10;--muted:#b9c0cc}
+*{box-sizing:border-box}
+body{margin:0;font-family:Roboto,system-ui,sans-serif;color:#fff;background:
+ radial-gradient(ellipse 120% 45% at 10% 0%,#2f8a6a 0%,transparent 60%),
+ radial-gradient(ellipse 90% 40% at 100% 40%,#5b3fb5 0%,transparent 60%),var(--bg);background-attachment:fixed}
+main{max-width:640px;margin:0 auto;padding:40px 20px 60px}
+.logo{font:clamp(72px,22vw,120px) Bangers;letter-spacing:3px;transform:rotate(-3deg);display:inline-block;margin:0;line-height:1}
+.logo span{color:var(--acc)}
+.tag{font-size:20px;color:#e6e9ef;margin:14px 0 26px;line-height:1.4}
+.dl{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;height:66px;border-radius:33px;background:var(--acc);color:#05251a;font:700 20px Roboto;text-decoration:none;box-shadow:0 10px 30px #4be3b040}
+.dl svg{width:28px;height:28px}
+.ver{text-align:center;color:var(--muted);font-size:14px;margin-top:10px}
+.alt{text-align:center;font-size:14px;margin-top:6px}.alt a{color:var(--muted)}
+h2{font:700 24px Roboto;margin:44px 0 14px}
+.steps{counter-reset:s;display:grid;gap:12px}
+.step{background:var(--card);border-radius:18px;padding:16px 16px 16px 64px;position:relative;line-height:1.45}
+.step:before{counter-increment:s;content:counter(s);position:absolute;left:16px;top:14px;width:34px;height:34px;border-radius:17px;background:var(--acc);color:#05251a;font-weight:700;display:grid;place-items:center}
+.step b{display:block;font-size:17px}.step span{color:var(--muted);font-size:15px}
+.video{border-radius:22px;overflow:hidden;background:#000;aspect-ratio:9/16;max-height:640px;margin:0 auto;display:block;width:100%}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.f{background:var(--card);border-radius:18px;padding:16px}.f b{display:block;margin-bottom:4px}.f span{color:var(--muted);font-size:14px;line-height:1.4}
+.qr{display:flex;gap:16px;align-items:center;background:var(--card);border-radius:18px;padding:16px;margin-top:12px}
+.qr img{width:110px;height:110px;border-radius:12px;background:#fff;padding:6px}
+footer{color:var(--muted);font-size:13px;text-align:center;margin-top:48px;line-height:1.5}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+  <h1 class="logo">YOINK<span>!</span></h1>
+  <p class="tag">Download videos and music from almost anywhere. Plus a browser with an ad blocker, Live TV, and players that keep going with the screen off.</p>
+
+  <a class="dl" id="dl" href="https://github.com/marcosrivera101/Yoink-releases/releases/download/latest/Yoink-64bit.apk">
+    <svg viewBox="0 0 24 24"><path fill="currentColor" d="M11 3h2v9.2l3-3 1.4 1.4L12 16l-5.4-5.4L8 9.2l3 3zM5 18h14v2.2H5z"/></svg>
+    Download for Android
+  </a>
+  <div class="ver" id="ver">Free · Android 8 and up</div>
+  <div class="alt">Says it isn't compatible? <a href="https://github.com/marcosrivera101/Yoink-releases/releases/download/latest/Yoink.apk">Get the version for every phone</a></div>
+
+  <div id="trailerBox" hidden>
+    <h2>See It in Action</h2>
+    <video class="video" id="trailer" controls playsinline preload="metadata"></video>
+  </div>
+
+  <h2>How to Install</h2>
+  <div class="steps">
+    <div class="step"><b>Tap Download for Android</b><span>Chrome may say the file could be harmful. That's what it says for every app that isn't from the Play Store. Tap <i>Download anyway</i>.</span></div>
+    <div class="step"><b>Open the file</b><span>Tap the download when it finishes, or find Yoink-64bit.apk in your Files app under Downloads.</span></div>
+    <div class="step"><b>Allow the install</b><span>Android asks to allow installs from Chrome (or Files). Tap <i>Settings</i>, turn on <i>Allow from this source</i>, then go back.</span></div>
+    <div class="step"><b>Tap Install, then Open</b><span>That's it. Yoink updates itself from inside the app after this (⋮ → Check for updates).</span></div>
+  </div>
+
+  <h2>What It Does</h2>
+  <div class="feat">
+    <div class="f"><b>Videos and music</b><span>Paste a link or search. Save as video, music, a show or an audiobook.</span></div>
+    <div class="f"><b>Browser + ad blocker</b><span>Tabs, groups, private tabs, and a Yoink button for anything playing.</span></div>
+    <div class="f"><b>Screen-off play</b><span>Background play and picture-in-picture for videos and music.</span></div>
+    <div class="f"><b>Live TV</b><span>Channel lists, a full guide, catch-up and recording.</span></div>
+    <div class="f"><b>Cast and TV remote</b><span>Send to your TV and control it from your phone.</span></div>
+    <div class="f"><b>Make it yours</b><span>Dozens of themes, from Aurora to Synthwave.</span></div>
+  </div>
+
+  <h2>Share It</h2>
+  <div class="qr"><img src="qr.png" alt="QR code for this page"><span style="color:var(--muted);line-height:1.45">Friends can scan this to get here. Or in Yoink: ⋮ → Share Yoink.</span></div>
+
+  <footer>Yoink is free. It doesn't break copy protection, so paid streaming services stay off limits.</footer>
+</main>
+<script>
+fetch('https://api.github.com/repos/marcosrivera101/Yoink-releases/releases/tags/latest')
+  .then(r => r.json()).then(r => {
+    const a = (r.assets || []).find(x => x.name === 'Yoink-64bit.apk');
+    const v = (r.name || '').replace('Yoink ', '');
+    if (a) document.getElementById('ver').textContent = 'Version ' + v + ' · ' + Math.round(a.size / 1048576) + ' MB · Free';
+  }).catch(() => {});
+// The trailer shows once trailer.mp4 is added next to this page.
+const vid = document.getElementById('trailer');
+vid.addEventListener('loadedmetadata', () => { document.getElementById('trailerBox').hidden = false; });
+vid.src = 'trailer.mp4';
+</script>
+</body>
+</html>
